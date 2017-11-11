@@ -22,3 +22,5 @@ Route::post('product/{id}', 'ProductsController@generators');
 
 //checking purpose
 Route::get('check', 'ProductsController@getCheck');
+
+Route::get('edit', 'ProductsController@getEdit');

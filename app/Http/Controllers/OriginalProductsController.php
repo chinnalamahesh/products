@@ -77,4 +77,10 @@ $users = DB::table('products_attributes')
             ->get();
        
   }
+
+
+  public function getEdit()
+  {
+  	return view('edit');
+  }
 }
