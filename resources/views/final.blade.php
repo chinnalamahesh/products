@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>All Products</title>
+  <title>Generators</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -59,7 +59,6 @@
     <thead>
       <tr>
         <th>Sizes</th>
-        <th>Combinations</th>
          <th>Quantity</th>
         <th>Price</th>
         <th>Default Combination</th>
@@ -67,21 +66,24 @@
     </thead>
     <tbody>
 
-      @foreach($valueOfAttribute as $attributeValue)
-       
-       @foreach($attributeId as $attributeIds)
+      {{ $attributeId[0]->attr_name }}
 
-       @foreach($combination as $combinations)
+      <!-- @foreach($valueOfAttribute as $attributeValue) -->
+       
+      <!--  @foreach($attributeId as $attributeIds) -->
+
+       
         <tr> 
+        @foreach($combination as $combinations)
         <td>{{$attributeIds->attr_name}}</td>
-        <td>{{$attributeValue->pro_att_value}}</td>
+        <!-- <td>{{$attributeValue->pro_att_value}}</td> -->
         <td contenteditable="true">{{$attributeValue->product_att_quantity}}</td>
         <td contenteditable="true">{{$combinations->price}}</td>
         <td><input type="radio" name="test-name" checked ></td>
         </tr>
      @endforeach
-     @endforeach
-     @endforeach
+     <!-- @endforeach -->
+    <!--  @endforeach -->
     </tbody>
 
     <tbody>

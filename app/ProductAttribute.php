@@ -11,6 +11,10 @@ class ProductAttribute extends Model
 
     public function values()
     {
-    	return $this->hasMany('App\ProductAttributeValues','att_id');
+    	return $this->hasMany('App\ProductAttributeValues','avid');
     }
+
+     protected $casts = [
+        'selects' => 'array',
+    ];
 }

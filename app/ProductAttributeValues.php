@@ -12,7 +12,7 @@ protected $primaryKey = 'avid';
 
 public function products()
 {
-	return $this->hasMany('App\ProductAttributeValues', 'att_id');
+	return $this->hasMany('App\ProductAttributeValues', 'avid');
 	
 }
 
